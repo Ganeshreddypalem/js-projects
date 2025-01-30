@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>
+ <button onclick="tc(1)">+</button >
+ <span id="tcs">0</span>
+  <button onclick="tc(-1)">-</button>
+  </p>
+  <button onclick="tc(0)">-</button>
+ <script>
+  function tc(click)
+  {
+    let tcs=document.getElementById("tcs");
+    let sum=parseInt(tcs.innerText)+click;
+    tcs.innerText=sum;
+    console.log(sum+click);
+    if(sum<0)
+  {
+    tcs.innerText=0;
+  }
+  } 
+ </script>
+</body>
+</html>
