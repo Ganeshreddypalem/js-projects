@@ -1,0 +1,13 @@
+ <script>
+       localStorage.setItem("count",1000);
+       localStorage.setItem("name","hari");
+       sessionStorage.setItem("student","ram");
+       let name=localStorage.getItem("name");
+       console.log(name);
+       let name1=sessionStorage.getItem("student");
+       console.log(name1);
+       localStorage.removeItem("count");
+       localStorage.setItem("name","rahul");         
+       localStorage.clear();
+    sessionStorage.setItem("student","Ganesh");        //It will not create new key it will replace "Ram" name
+    </script>
