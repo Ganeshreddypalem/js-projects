@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Local Storage</title>
+</head>
+<body>
+    <div>
+        <button id="inc">+</button>
+        <b id="count">0</b>
+        <button id="desc">-</button>
+    </div>
+    <script>
+        let countElement = document.getElementById("count");
+        let countValue = localStorage.getItem("count") ? parseInt(localStorage.getItem("count")) : 0;
+
+        
+        countElement.innerHTML = countValue;
+
+        // Increment Button
+        document.getElementById("inc").addEventListener("click", () => {
+            countValue++;
+            countElement.innerHTML = countValue;
+            localStorage.setItem("count", countValue);
+        });
+
+        // Decrement Button
+        document.getElementById("desc").addEventListener("click", () => {
+            if (countValue > 0) {  // Optional: Prevent negative counts
+                countValue--;
+                countElement.innerHTML = countValue;
+                localStorage.setItem("count", countValue);
+            }
+        });
+    </script>
+</body>
+</html>
