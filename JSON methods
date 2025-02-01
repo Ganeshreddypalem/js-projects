@@ -1,0 +1,15 @@
+ <script>
+        let trainer={name:"Kishore",age:25,address:"AP"};
+        localStorage.setItem("trainer",trainer);
+        console.log(String(trainer)); 
+
+        let fruits=["grapes","oranges","apples"];
+        localStorage.setItem("fruits",fruits);
+        console.log(fruits);
+        console.log(localStorage.getItem(fruits));
+
+        localStorage.setItem("trainer",JSON.stringify(trainer));  //Object to json
+        let result=JSON.parse(localStorage.getItem("trainer"));   //It is used to convert string(to decrease size) to object      Non-primitive(High memory required)->primitive(low size memory required)
+        console.log(typeof result);
+        console.log(result);
+    </script>
