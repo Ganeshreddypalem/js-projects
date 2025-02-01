@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Local Storage</title>
+</head>
+<body>
+    <script>
+        function one()
+        {
+            console.log("Ganesh");
+        }
+        function two()
+        {
+            console.log("Reddy");
+        }
+
+        let timeOut=setTimeout(one,1000);
+        clearTimeout(timeOut);
+       let interval=setInterval(two,5000);
+        clearInterval(interval);
+    </script>
+</body>
+</html>
