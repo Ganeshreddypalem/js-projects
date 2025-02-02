@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Local Storage</title>
+</head>
+<body>
+    <div class="parent" style="width: 100px; height: 100px;"></div>
+    <button id="btn">start</button>
+
+    <script>
+        let parentDiv = document.querySelector(".parent");
+        let btnTag = document.getElementById("btn");
+        let interval;
+
+        btnTag.addEventListener("click", () => {
+            if (btnTag.innerText == "start") {
+                if (!interval) {
+                    interval = setInterval(() => {
+                        if (parentDiv.style.backgroundColor == "red") {
+                            parentDiv.style.backgroundColor = "blue";
+                        } else {
+                            parentDiv.style.backgroundColor = "red";
+                        }
+                    }, 500);
+                }
+                btnTag.innerText = "stop";
+            } else {
+                clearInterval(interval);
+                btnTag.innerText="stop";
+                interval=undefined;
+            }
+        });
+        </script>
+        </body>
+        </html>
